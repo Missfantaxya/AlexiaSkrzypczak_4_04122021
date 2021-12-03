@@ -30,7 +30,6 @@ img {
   padding-right: 1rem;
 }
 
-/* //* */
 .topnav {
   overflow: hidden;
   margin: 3.5%;
@@ -102,7 +101,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 }
 
