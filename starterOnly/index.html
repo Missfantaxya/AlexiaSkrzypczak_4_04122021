@@ -71,7 +71,7 @@
                   id="first"
                   name="first"
                   minlength="2"
-                /><br>
+                /><span id="error__firstname" class="error"></span>
               </div>
               <div
                 class="formData">
@@ -81,7 +81,7 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                /><span id="error__lastname" class="error"></span>
               </div>
               <div
                 class="formData">
@@ -91,7 +91,7 @@
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                /><span id="error__email" class="error"></span>
               </div>
               <div
                 class="formData">
@@ -107,6 +107,7 @@
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <span id="error__quantity" class="error"></span>
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
@@ -177,6 +178,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <div id="error__location" class="error"></div>
               </div>
 
               <div
@@ -191,7 +193,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
+                <div id="error__agree" class="error"></div>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
