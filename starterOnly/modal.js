@@ -145,7 +145,9 @@ function validate() {
   console.log("errors.length :", errors.length)
 
   if (errors.length == 0) {
-    formSend.submit()
+    document.querySelector(".confirm").style.display = "block"
+    formSend.style.display = "none"
+    setInterval(() => formSend.submit(), 3000)
     return true
   } else {
     return false

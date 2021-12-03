@@ -529,8 +529,14 @@ footer {
   }
 }
 
+/* error messages */
 .error {
   font-size: small;
   font-weight: 200;
   color: red;
+}
+
+/* confirmation message */
+.confirm {
+  display: none;
 }
