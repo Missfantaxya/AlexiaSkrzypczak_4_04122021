@@ -100,24 +100,49 @@ function validate() {
   var errors = []
   if (isValidText(first.value) == false) {
     errors.push("firstError")
+    document.getElementById("error__firstname").textContent =
+      "Veuillez entrer 2 caractères ou plus pour le prénom"
+  } else {
+    document.getElementById("error__firstname").textContent = ""
   }
   if (isValidText(last.value) == false) {
     errors.push("lastError")
+    document.getElementById("error__lastname").textContent =
+      "Veuillez entrer 2 caractères ou plus pour le nom"
+  } else {
+    document.getElementById("error__lastname").textContent = ""
   }
+
   if (isValidEmail() == false) {
     errors.push("emailError")
+    document.getElementById("error__email").textContent =
+      "Veuillez entrer une adresse email valide"
+  } else {
+    document.getElementById("error__email").textContent = ""
   }
   if (isValidetournamentNumber() == false) {
     errors.push("quantityError")
+    document.getElementById("error__quantity").textContent =
+      "Veuillez entrer un nombre"
+  } else {
+    document.getElementById("error__quantity").textContent = ""
   }
   if (checkedCities == false) {
     errors.push("locationError")
+    document.getElementById("error__location").textContent =
+      "Veuillez choisir au moins une option"
+  } else {
+    document.getElementById("error__location").textContent = ""
   }
   if (isCheckedCgu() == false) {
     errors.push("agreeError")
+    document.getElementById("error__agree").textContent =
+      "Veuillez accepter les conditions d'utilisation"
+  } else {
+    document.getElementById("error__agree").textContent = ""
   }
-  // console.log("errors :", errors)
-  // console.log("errors.length :", errors.length)
+  console.log("errors :", errors)
+  console.log("errors.length :", errors.length)
 
   if (errors.length == 0) {
     formSend.submit()
