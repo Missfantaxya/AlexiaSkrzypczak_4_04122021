@@ -14,6 +14,7 @@ const formData = document.querySelectorAll(".formData")
 const modalClose = document.querySelectorAll(".close")
 const first = document.querySelector("#first")
 const last = document.querySelector("#last")
+const birthdate = document.querySelector("#birthdate")
 const quantity = document.querySelector("#quantity")
 const cities = document.getElementsByName("location")
 const cgu = document.getElementById("checkbox1")
@@ -59,6 +60,12 @@ function isValidEmail() {
   return regexEmail.test(email.value)
 }
 
+// validity of birthdate
+function isValidBirthdate() {
+  const isBirthdate = birthdate.value
+  return isBirthdate.length === 10 ? true : false
+}
+
 // validity of tournament
 const regexTournament = /^[0-9]{1,}/
 
@@ -95,6 +102,7 @@ function notEraseForm(event) {
 formSend.addEventListener("submit", notEraseForm)
 
 function validate() {
+  isValidBirthdate()
   isCheckedCgu()
   isCheckedCity()
   var errors = []
@@ -120,6 +128,13 @@ function validate() {
   } else {
     document.getElementById("error__email").textContent = ""
   }
+  if (isValidBirthdate() == false) {
+    errors.push("birthdateError")
+    document.getElementById("error__birthdate").textContent =
+      "Veuillez entrer votre date de naissance"
+  } else {
+    document.getElementById("error__birthdate").textContent = ""
+  }
   if (isValidetournamentNumber() == false) {
     errors.push("quantityError")
     document.getElementById("error__quantity").textContent =
@@ -141,8 +156,6 @@ function validate() {
   } else {
     document.getElementById("error__agree").textContent = ""
   }
-  console.log("errors :", errors)
-  console.log("errors.length :", errors.length)
 
   if (errors.length == 0) {
     document.querySelector(".confirm").style.display = "block"

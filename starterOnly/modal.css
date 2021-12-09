@@ -17,6 +17,9 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
+  /*en traine un décalage avec débordement*/
+  /* width: 100vw; */
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -30,7 +33,6 @@ img {
   padding-right: 1rem;
 }
 
-/* //* */
 .topnav {
   overflow: hidden;
   margin: 3.5%;
@@ -102,7 +104,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 }
 
@@ -133,12 +134,12 @@ main {
 .modal-btn:hover {
   background: #3876ac;
 }
-
-.footer {
+/* inutile la class footer n'est pas dnas le html */
+/* .footer {
   margin: 20px;
   padding: 10px;
   font-family: var(--font-slab);
-}
+} */
 
 /* Modal form */
 
@@ -491,14 +492,15 @@ footer {
   .hero-section {
     display: block;
     box-shadow: unset;
-    width: 100vw;
+    width: 100%;
   }
   .hero-content {
     background: #fff;
     color: #000;
     padding: 2vw;
     min-width: 90vw;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     text-align: center;
   }
   .hero-content::after {
@@ -524,6 +526,11 @@ footer {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
+  }
+  footer {
+    width: 100%;
+    padding: 2vw;
+    margin: 0;
   }
   .copyrights {
     margin-top: 50px;
