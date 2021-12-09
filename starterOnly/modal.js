@@ -156,8 +156,6 @@ function validate() {
   } else {
     document.getElementById("error__agree").textContent = ""
   }
-  console.log("errors :", errors)
-  console.log("errors.length :", errors.length)
 
   if (errors.length == 0) {
     document.querySelector(".confirm").style.display = "block"
