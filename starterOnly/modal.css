@@ -17,8 +17,6 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  /*en traine un décalage avec débordement*/
-  /* width: 100vw; */
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
@@ -134,12 +132,6 @@ main {
 .modal-btn:hover {
   background: #3876ac;
 }
-/* inutile la class footer n'est pas dnas le html */
-/* .footer {
-  margin: 20px;
-  padding: 10px;
-  font-family: var(--font-slab);
-} */
 
 /* Modal form */
 
@@ -230,12 +222,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/*
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -499,7 +486,6 @@ footer {
     color: #000;
     padding: 2vw;
     min-width: 90vw;
-    /* width: 100vw; */
     width: 100%;
     text-align: center;
   }
@@ -527,6 +513,7 @@ footer {
     margin: 32px auto 10px;
     padding: 12px 35px;
   }
+  /*évite un décalage avec débordement*/
   footer {
     width: 100%;
     padding: 2vw;
