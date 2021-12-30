@@ -51,6 +51,11 @@ const cgu = document.getElementById("checkbox1")
  * @auteur Alexia Skrzypczak
  */
 const formSend = document.querySelector("[name=reserve]")
+/**
+ * @constant {object}
+ * @auteur Alexia Skrzypczak
+ */
+const confirmClose = document.querySelectorAll(".confirm__button")
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal))
@@ -75,6 +80,13 @@ modalClose.forEach((span) => span.addEventListener("click", closeModal))
 function closeModal() {
   modalbg.style.display = "none"
 }
+
+// close modal with button of confirm
+/**
+ * @description écoute le click sur l'élément button pour active la function confirmModal
+ * @auteur Alexia Skrzypczak
+ */
+confirmClose.forEach((button) => button.addEventListener("click", closeModal))
 
 // validity of the field's form
 /**
@@ -321,7 +333,8 @@ function validate() {
      * @description soummission du formulaire au bout de 4 secondes
      * @auteur Alexia Skrzypczak
      */
-    setInterval(() => formSend.submit(), 4000)
+    //*
+    // setInterval(() => formSend.submit(), 4000)
     return true
   } else {
     return false
