@@ -333,8 +333,7 @@ function validate() {
      * @description soummission du formulaire au bout de 4 secondes
      * @auteur Alexia Skrzypczak
      */
-    //*
-    // setInterval(() => formSend.submit(), 4000)
+    setInterval(() => formSend.submit(), 4000)
     return true
   } else {
     return false
