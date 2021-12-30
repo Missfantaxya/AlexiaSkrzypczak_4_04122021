@@ -231,6 +231,15 @@ function validate() {
    */
   var errors = []
 
+  /**
+   *@description ajoute une bordure rouge au champs invalide
+   * @param {*} field
+   * @auteur Alexia Skrzypczak
+   */
+  function error(field) {
+    field.setAttribute("style", "border : 2px solid #e54858")
+  }
+
   //Checking the validity of each form field
   /**
    * @description si le prénom n'est pas valide, enregistre cette ligne dans le tableau des champs invalides.
@@ -240,8 +249,10 @@ function validate() {
     errors.push("firstError")
     document.getElementById("error__firstname").textContent =
       "Veuillez entrer 2 caractères ou plus pour le prénom"
+    error(first)
   } else {
     document.getElementById("error__firstname").textContent = ""
+    first.removeAttribute("style")
   }
 
   /**
@@ -252,8 +263,10 @@ function validate() {
     errors.push("lastError")
     document.getElementById("error__lastname").textContent =
       "Veuillez entrer 2 caractères ou plus pour le nom"
+    error(last)
   } else {
     document.getElementById("error__lastname").textContent = ""
+    last.removeAttribute("style")
   }
 
   /**
@@ -264,8 +277,10 @@ function validate() {
     errors.push("emailError")
     document.getElementById("error__email").textContent =
       "Veuillez entrer une adresse email valide"
+    error(email)
   } else {
     document.getElementById("error__email").textContent = ""
+    email.removeAttribute("style")
   }
   /**
    * @description si la date de naissance n'est pas valide, enregistre cette ligne dans le tableau des champs invalides
@@ -275,8 +290,10 @@ function validate() {
     errors.push("birthdateError")
     document.getElementById("error__birthdate").textContent =
       "Veuillez entrer votre date de naissance"
+    error(birthdate)
   } else {
     document.getElementById("error__birthdate").textContent = ""
+    birthdate.removeAttribute("style")
   }
 
   /**
@@ -287,8 +304,10 @@ function validate() {
     errors.push("quantityError")
     document.getElementById("error__quantity").textContent =
       "Veuillez entrer un nombre"
+    error(quantity)
   } else {
     document.getElementById("error__quantity").textContent = ""
+    quantity.removeAttribute("style")
   }
   /**
    * @description si lla ville n'est pas valide, enregistre cette ligne dans le tableau des champs invalides
