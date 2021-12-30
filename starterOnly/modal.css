@@ -313,7 +313,8 @@ input {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.confirm__button {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -545,4 +546,15 @@ footer {
 /* confirmation message */
 .confirm {
   display: none;
+}
+
+.confirm__text {
+  margin: 70% auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.confirm__text > p {
+  padding: 0;
 }
