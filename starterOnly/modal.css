@@ -17,7 +17,6 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -36,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-  float: left;
+    float: left;
 }
 .main-navbar {
-  float: right;
+    float: right;
 }
 .topnav a {
   float: left;
@@ -70,9 +69,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
@@ -80,9 +77,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {
-    position: relative;
-  }
+  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -95,15 +90,16 @@ img {
   }
 }
 
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
+
+
+ @media screen and (max-width: 540px) {
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    margin-top: -15px;
   }
-}
+} 
 
 main {
   font-size: 130%;
@@ -115,6 +111,8 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
+
+
 }
 
 .modal-btn {
@@ -131,6 +129,12 @@ main {
 
 .modal-btn:hover {
   background: #3876ac;
+}
+
+.footer {
+  margin: 20px;
+  padding: 10px;
+  font-family: var(--font-slab);
 }
 
 /* Modal form */
@@ -222,7 +226,12 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-
+/* 
+input[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.4em;
+    color: red;
+} */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -470,24 +479,14 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
-  main {
-    padding-top: 0.5vw;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 1px 2vw 15px;
-  }
   .hero-section {
     display: block;
     box-shadow: unset;
-    width: 100%;
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 2vw;
-    min-width: 90vw;
-    width: 100%;
-    text-align: center;
+    padding: 20px;
   }
   .hero-content::after {
     content: unset;
@@ -496,9 +495,8 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 3rem;
+    font-size: 4.5rem;
     white-space: normal;
-    width: 100%;
   }
   .hero-text {
     width: unset;
@@ -512,12 +510,6 @@ footer {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
-  }
-  /*évite un décalage avec débordement*/
-  footer {
-    width: 100%;
-    padding: 2vw;
-    margin: 0;
   }
   .copyrights {
     margin-top: 50px;
@@ -535,14 +527,3 @@ footer {
   }
 }
 
-/* error messages */
-.error {
-  font-size: small;
-  font-weight: 200;
-  color: red;
-}
-
-/* confirmation message */
-.confirm {
-  display: none;
-}
